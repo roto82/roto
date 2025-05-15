@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワードを入力してください</title>
+    <link rel="stylesheet" href="locked.css">
+</head>
+<body>
+    <div id="lock-screen">
+        <h1>パスワード入力ページ</h1>
+        <p>このサイトは個人情報が載っているため。</p>
+        <p>このページにアクセスするにはパスワードを入力してください。</p>
+        <p>パスワードは「大原学園2025年入学した生徒アカウントの共通上4桁」です。</p>
+        <div class="password-wrapper">
+            <input type="password" class="password__input" id="password-input" placeholder="パスワードを入力" maxlength="4" pattern="^[0-9]{4}$">
+            <button class="password__toggle" type="button"></button>
+        </div>
+        <button id="unlock-button">送信</button>
+        <p id="error-message" style="color: red; display: none;">パスワードが間違っています。</p>
+    </div>
+
+    <div id="protected-content" style="display: none;">
+        <h1>ようこそ！</h1>
+        <p>このページはパスワードで保護されています。</p>
+        <a href="index.html">ホームに戻る</a>
+    </div>
+
+    <script src="locked.js"></script>
+</body>
+</html>
